@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shinkai/core/theming/colors.dart';
-import 'package:shinkai/core/theming/text_styles.dart';
+import 'package:shinkai/core/theme/colors.dart';
+import 'package:shinkai/core/theme/text_styles.dart';
 
 class CategoriesList extends StatelessWidget {
   final List<String> categories;

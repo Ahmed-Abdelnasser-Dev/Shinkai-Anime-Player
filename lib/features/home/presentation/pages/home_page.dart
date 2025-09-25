@@ -1,8 +1,6 @@
-// Presentation logic for Home feature
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shinkai/core/theming/text_styles.dart';
+import 'package:shinkai/core/theme/text_styles.dart';
 import 'package:shinkai/core/widgets/custom_bottom_nav_bar.dart';
 import 'package:shinkai/features/home/presentation/widgets/categories_tabs.dart';
 import 'package:shinkai/features/home/presentation/widgets/character_card.dart';

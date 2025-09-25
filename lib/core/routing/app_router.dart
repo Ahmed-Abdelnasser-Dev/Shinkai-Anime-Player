@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shinkai/core/routing/routes.dart';
-import 'package:shinkai/features/details/presentation/details_page.dart';
+import 'package:shinkai/features/details/presentation/pages/details_page.dart';
 import 'package:shinkai/features/home/presentation/pages/home_page.dart';
 
 class AppRouter {
@@ -10,7 +10,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) =>  HomePage());
 
       case Routes.details:
-        return MaterialPageRoute(builder: (_) => const DetailsPage());
+        return MaterialPageRoute(builder: (_) =>  DetailsPage());
 
       default:
         return MaterialPageRoute(

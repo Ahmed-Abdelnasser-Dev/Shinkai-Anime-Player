@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shinkai/core/routing/app_router.dart';
 import 'package:shinkai/core/routing/routes.dart';
-import 'package:shinkai/core/theming/colors.dart';
+import 'package:shinkai/core/theme/colors.dart';
 
 class ShinkaiApp extends StatelessWidget {
   const ShinkaiApp({super.key, required this.appRouter});
@@ -24,7 +24,7 @@ class ShinkaiApp extends StatelessWidget {
             primaryColor: ColorsManager.primaryPurple,
             scaffoldBackgroundColor: Colors.transparent,
           ),
-          initialRoute: Routes.home,
+          initialRoute: Routes.details,
           onGenerateRoute: appRouter.generateRoute,
         ),
       ),
