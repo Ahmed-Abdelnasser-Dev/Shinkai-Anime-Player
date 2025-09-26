@@ -41,7 +41,7 @@ class CategoriesList extends StatelessWidget {
                 child: Center(
                   child: Text(
                     categories[index],
-                    style: TextStyles.bodyText1RalewayBold.copyWith(
+                    style: TextStyles.bodyText1.copyWith(
                       color: isSelected
                           ? Colors.white
                           : ColorsManager.primaryPurple,

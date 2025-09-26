@@ -24,7 +24,7 @@ class ShinkaiApp extends StatelessWidget {
             primaryColor: ColorsManager.primaryPurple,
             scaffoldBackgroundColor: Colors.transparent,
           ),
-          initialRoute: Routes.details,
+          initialRoute: Routes.home,
           onGenerateRoute: appRouter.generateRoute,
         ),
       ),

@@ -33,7 +33,7 @@ class CharacterCard extends StatelessWidget {
          SizedBox(height: 10.h),
          Text(
           characterName,
-          style: TextStyles.bodyText1RalewayBold.copyWith(
+          style: TextStyles.bodyText1.copyWith(
             color: ColorsManager.textBlack,
           ),
         ),

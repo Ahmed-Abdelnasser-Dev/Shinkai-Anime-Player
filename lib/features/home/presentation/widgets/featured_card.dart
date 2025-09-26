@@ -28,7 +28,7 @@ class FeaturedCard extends StatelessWidget {
         SizedBox(height: 8.h),
         Text(
           animeName,
-          style: TextStyles.bodyText1RalewayBold.copyWith(
+          style: TextStyles.bodyText1.copyWith(
             color: ColorsManager.textBlack,
           ),
         ),

@@ -18,7 +18,7 @@ class GenreItemWidget extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.25),
+              color: const Color.fromRGBO(0, 0, 0, 0.25),
               spreadRadius: 0,
               blurRadius: 8,
               offset: const Offset(0, 4),

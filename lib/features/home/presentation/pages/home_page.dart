@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shinkai/core/routing/route_helper_extensions.dart';
 import 'package:shinkai/core/theme/text_styles.dart';
 import 'package:shinkai/core/widgets/custom_bottom_nav_bar.dart';
 import 'package:shinkai/features/home/presentation/widgets/categories_tabs.dart';
@@ -93,7 +94,7 @@ class HomePage extends StatelessWidget {
                     // * Heading
                     Text(
                       'Where Anime Comes Alive',
-                      style: TextStyles.heading1Raleway,
+                      style: TextStyles.heading1,
                     ),
                     SizedBox(height: 24.h),
 
@@ -118,10 +119,15 @@ class HomePage extends StatelessWidget {
                           itemBuilder: (context, index) {
                             final key = animeMap.keys.elementAt(index);
                             final anime = animeMap[key]!;
-                            return FeaturedCard(
-                              animeImage: anime["imagePath"]!,
-                              animeName: anime["title"]!,
-                              animeGenre: anime["genre"]!,
+                            return GestureDetector(
+                              onTap: () => context.pushNamed("/details"),
+                                
+                              
+                              child: FeaturedCard(
+                                animeImage: anime["imagePath"]!,
+                                animeName: anime["title"]!,
+                                animeGenre: anime["genre"]!,
+                              ),
                             );
                           },
                         ),
@@ -130,7 +136,7 @@ class HomePage extends StatelessWidget {
 
                     SizedBox(height: 24.h),
                     //* Top Characters
-                    Text('Top Characters', style: TextStyles.heading1Raleway),
+                    Text('Top Characters', style: TextStyles.heading1),
                     SizedBox(height: 24.h),
                     Padding(
                       padding: const EdgeInsets.only(right: 14.0).w,

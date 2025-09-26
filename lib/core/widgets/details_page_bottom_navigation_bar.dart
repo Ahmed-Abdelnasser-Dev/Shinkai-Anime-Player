@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shinkai/core/routing/route_helper_extensions.dart';
 import 'package:shinkai/core/theme/colors.dart';
 import 'package:shinkai/core/theme/text_styles.dart';
 
@@ -30,7 +31,7 @@ class DetailsPageBottomNavigationBar extends StatelessWidget {
             ),
 
             onPressed: () {},
-            label: Text("Preview", style: TextStyles.bodyText1RalewayBold),
+            label: Text("Preview", style: TextStyles.bodyText1),
           ),
         ),
 
@@ -52,8 +53,8 @@ class DetailsPageBottomNavigationBar extends StatelessWidget {
               colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
 
-            onPressed: () {},
-            label: Text("Watch Now", style: TextStyles.bodyText1RalewayBold),
+            onPressed: () => context.pushNamed("/upgradePlan"),
+            label: Text("Watch Now", style: TextStyles.bodyTextRalewayMedium11White),
           ),
         ),
       ],

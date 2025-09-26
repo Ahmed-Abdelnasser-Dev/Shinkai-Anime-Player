@@ -146,7 +146,7 @@ Widget details(Map<String, dynamic> anime) {
               child: Text(
                 anime["description"],
                 softWrap: true,
-                style: TextStyles.bodyText2Raleway.copyWith(
+                style: TextStyles.bodyTextRalewayMedium11White.copyWith(
                   fontWeight: FontWeight.w600,
                   fontSize: 14.sp,
                 ),
