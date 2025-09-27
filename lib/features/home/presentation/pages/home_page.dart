@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   static const List<String> categories = [
     'All',
     'Popular',
-    'trending',
+    'Trending',
     'New Releases',
     'Top Rated',
   ];
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
       "title": "Dragon Ball Z",
       "genre": "Action",
     },
-    "Demon_Slayer": {
+    "demon_slayer": {
       "imagePath": "assets/images/demon_slayer_poster.png",
       "title": "Demon Slayer",
       "genre": "Fantasy",
@@ -77,27 +77,26 @@ class HomePage extends StatelessWidget {
           children: [
             //* Decorative Stars
             Positioned(
-              height: ScreenUtil.defaultSize.height,
-              width: ScreenUtil.defaultSize.width,
-
-              top: -200.h,
-              right: -130.w,
-              child: Image.asset('assets/images/star_2.png'),
+              top: -106.h,
+              left: 159.w,
+              child: Image.asset('assets/images/background_elements/Star 1.png'),
             ),
-            SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.only(top: 23.0.h, left: 14.0.w),
 
+            //* Main content scroll
+            Padding(
+              padding: EdgeInsets.only(
+                    top: 23.0.h,
+                    left: 14.0.w,
+                    right: 14.0.w,
+                  ),
+              child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // * Heading
-                    Text(
-                      'Where Anime Comes Alive',
-                      style: TextStyles.heading1,
-                    ),
+                    Text('Where Anime Comes Alive', style: TextStyles.heading1),
                     SizedBox(height: 24.h),
-
+                              
                     //* Categories Tabs
                     CategoriesList(
                       categories: categories,
@@ -105,58 +104,52 @@ class HomePage extends StatelessWidget {
                       onCategorySelected: (index) {},
                     ),
                     SizedBox(height: 24.h),
-
-                    //* Featured Section
-                    Padding(
-                      padding: const EdgeInsets.only(right: 14.0).w,
-                      child: SizedBox(
-                        height: 300.h,
-                        child: ListView.separated(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: animeMap.length,
-                          separatorBuilder: (context, index) =>
-                              SizedBox(width: 16.w),
-                          itemBuilder: (context, index) {
-                            final key = animeMap.keys.elementAt(index);
-                            final anime = animeMap[key]!;
-                            return GestureDetector(
-                              onTap: () => context.pushNamed("/details"),
-                                
                               
-                              child: FeaturedCard(
-                                animeImage: anime["imagePath"]!,
-                                animeName: anime["title"]!,
-                                animeGenre: anime["genre"]!,
-                              ),
-                            );
-                          },
-                        ),
+                    //* Featured Section
+                    SizedBox(
+                      height: 300.h,
+                      child: ListView.separated(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: animeMap.length,
+                        separatorBuilder: (context, index) =>
+                            SizedBox(width: 16.w),
+                        itemBuilder: (context, index) {
+                          final key = animeMap.keys.elementAt(index);
+                          final anime = animeMap[key]!;
+                          return GestureDetector(
+                            onTap: () => context.pushNamed("/details"),
+                            child: FeaturedCard(
+                              animeImage: anime["imagePath"]!,
+                              animeName: anime["title"]!,
+                              animeGenre: anime["genre"]!,
+                            ),
+                          );
+                        },
                       ),
                     ),
-
+                              
                     SizedBox(height: 24.h),
+                              
                     //* Top Characters
                     Text('Top Characters', style: TextStyles.heading1),
                     SizedBox(height: 24.h),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 14.0).w,
-                      child: SizedBox(
-                        height: 150.h,
-                        child: ListView.separated(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: charactersMap.length,
-                          separatorBuilder: (context, index) =>
-                              SizedBox(width: 16.w),
-                          itemBuilder: (context, index) {
-                            final key = charactersMap.keys.elementAt(index);
-                            final character = charactersMap[key]!;
-                            return CharacterCard(
-                              characterImage: character["imagePath"]!,
-                              characterName: character["characterName"]!,
-                              characterAnime: character["animeTitle"]!,
-                            );
-                          },
-                        ),
+                              
+                    SizedBox(
+                      height: 150.h,
+                      child: ListView.separated(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: charactersMap.length,
+                        separatorBuilder: (context, index) =>
+                            SizedBox(width: 16.w),
+                        itemBuilder: (context, index) {
+                          final key = charactersMap.keys.elementAt(index);
+                          final character = charactersMap[key]!;
+                          return CharacterCard(
+                            characterImage: character["imagePath"]!,
+                            characterName: character["characterName"]!,
+                            characterAnime: character["animeTitle"]!,
+                          );
+                        },
                       ),
                     ),
                   ],
@@ -169,8 +162,8 @@ class HomePage extends StatelessWidget {
 
       //* Bottom Navigation Bar
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 22.0).h,
-        child: CustomBottomNavBar(currentIndex: 0, onTap: (int p1) {  },),
+        padding: EdgeInsets.symmetric(vertical: 22.0.h),
+        child: CustomBottomNavBar(currentIndex: 0, onTap: (int index) {}),
       ),
     );
   }
