@@ -31,6 +31,7 @@ class DetailsPage extends StatelessWidget {
       backgroundColor: ColorsManager.deepPurple,
       body: SingleChildScrollView(
         child: Stack(
+          alignment: AlignmentGeometry.topCenter,
           children: [
             //* Background Circle
             Positioned(
@@ -69,7 +70,7 @@ class DetailsPage extends StatelessWidget {
 
             Image.asset(
               anime["poster"],
-              width: 376.w,
+              width: double.infinity,
               height: 519.h,
               fit: BoxFit.cover,
             ),
@@ -146,9 +147,8 @@ Widget details(Map<String, dynamic> anime) {
               child: Text(
                 anime["description"],
                 softWrap: true,
-                style: TextStyles.bodyTextRalewayMedium11White.copyWith(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14.sp,
+                style: TextStyles.ralewayBodyMedium14.copyWith(
+                  color: ColorsManager.textGrey,
                 ),
               ),
             ),

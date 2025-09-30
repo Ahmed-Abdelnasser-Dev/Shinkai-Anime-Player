@@ -23,22 +23,27 @@ class CharacterCard extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(100.r),
 
-          child:  Image.asset(
+          child: Image.asset(
             characterImage,
             width: 92.w,
             height: 92.h,
             fit: BoxFit.cover,
           ),
         ),
-         SizedBox(height: 10.h),
-         Text(
+        SizedBox(height: 10.h),
+        Text(
           characterName,
-          style: TextStyles.bodyText1.copyWith(
+          style: TextStyles.ralewayBodyBold14.copyWith(
             color: ColorsManager.textBlack,
           ),
         ),
-         SizedBox(height: 6.h),
-         Text(characterAnime, style: TextStyles.bodyText3),
+        SizedBox(height: 6.h),
+        Text(
+          characterAnime,
+          style: TextStyles.ralewayCaptionMedium11.copyWith(
+            color: ColorsManager.textGrey,
+          ),
+        ),
       ],
     );
   }

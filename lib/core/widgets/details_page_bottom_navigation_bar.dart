@@ -31,7 +31,7 @@ class DetailsPageBottomNavigationBar extends StatelessWidget {
             ),
 
             onPressed: () {},
-            label: Text("Preview", style: TextStyles.bodyText1),
+            label: Text("Preview", style: TextStyles.ralewayTitleSemiBold16),
           ),
         ),
 
@@ -54,7 +54,9 @@ class DetailsPageBottomNavigationBar extends StatelessWidget {
             ),
 
             onPressed: () => context.pushNamed("/upgradePlan"),
-            label: Text("Watch Now", style: TextStyles.bodyTextRalewayMedium11White),
+            label: Text("Watch Now", style: TextStyles.ralewayTitleSemiBold16.copyWith(
+              color: ColorsManager.backgroundWhite
+            )),
           ),
         ),
       ],

@@ -22,18 +22,27 @@ class FeaturedCard extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(12.r),
 
-          child: Image.asset(animeImage, width: 198.w, height: 247.h,
-              fit: BoxFit.cover),
+          child: Image.asset(
+            animeImage,
+            width: 198.w,
+            height: 247.h,
+            fit: BoxFit.cover,
+          ),
         ),
         SizedBox(height: 8.h),
         Text(
           animeName,
-          style: TextStyles.bodyText1.copyWith(
+          style: TextStyles.ralewayTitleSemiBold16.copyWith(
             color: ColorsManager.textBlack,
           ),
         ),
         SizedBox(height: 4.h),
-        Text(animeGenre, style: TextStyles.bodyText3),
+        Text(
+          animeGenre,
+          style: TextStyles.ralewayBodySemiBold14.copyWith(
+            color: ColorsManager.textGrey,
+          ),
+        ),
       ],
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shinkai/core/theme/colors.dart';
 import 'package:shinkai/core/theme/text_styles.dart';
 
 class GenreItemWidget extends StatelessWidget {
@@ -31,7 +32,9 @@ class GenreItemWidget extends StatelessWidget {
         child: Center(
           child: Text(
             genreName,
-            style: TextStyles.bodyTextRalewayMedium11White,
+            style: TextStyles.ralewayCaptionMedium11.copyWith(
+                color: ColorsManager.backgroundWhite,
+              ),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
           ),

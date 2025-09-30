@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:shinkai/core/theme/colors.dart';
 import 'package:shinkai/core/theme/text_styles.dart';
 
 class AnimeNumberWidget extends StatelessWidget {
-
   final String views;
   final String claps;
   final String seasons;
@@ -29,8 +29,13 @@ class AnimeNumberWidget extends StatelessWidget {
               height: 16.h,
               colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
-            SizedBox(width:  8.w),
-            Text("$views Views", style: TextStyles.bodyText3),
+            SizedBox(width: 8.w),
+            Text(
+              "$views Views",
+              style: TextStyles.ralewayBodyMedium14.copyWith(
+                color: ColorsManager.backgroundWhite,
+              ),
+            ),
           ],
         ),
         Row(
@@ -41,8 +46,10 @@ class AnimeNumberWidget extends StatelessWidget {
               height: 16.h,
               colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
-            SizedBox(width:  8.w),
-            Text("$views Claps",style: TextStyles.bodyText3),
+            SizedBox(width: 8.w),
+            Text("$views Claps", style: TextStyles.ralewayBodyMedium14.copyWith(
+                color: ColorsManager.backgroundWhite,
+              ),),
           ],
         ),
         Row(
@@ -53,8 +60,10 @@ class AnimeNumberWidget extends StatelessWidget {
               height: 16.h,
               colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
             ),
-            SizedBox(width:  8.w),
-            Text("$views Seasons", style: TextStyles.bodyText3,),
+            SizedBox(width: 8.w),
+            Text("$views Seasons", style: TextStyles.ralewayBodyMedium14.copyWith(
+                color: ColorsManager.backgroundWhite,
+              ),),
           ],
         ),
       ],

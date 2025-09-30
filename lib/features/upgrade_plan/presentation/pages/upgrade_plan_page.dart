@@ -18,7 +18,7 @@ class _UpgradePlanPageState extends State<UpgradePlanPage> {
   bool isCardSelected = true;
 
   void changeSelected() {
-   setState(() {
+    setState(() {
       isCardSelected = !isCardSelected;
     });
   }
@@ -64,8 +64,7 @@ class _UpgradePlanPageState extends State<UpgradePlanPage> {
                         Expanded(child: Spacer()),
                         Text(
                           "Upgrade Plan",
-                          style: TextStyles.bodyText1.copyWith(
-                            fontSize: 22.sp,
+                          style: TextStyles.ralewayHeadingBold22.copyWith(
                             color: ColorsManager.textBlack,
                           ),
                         ),
@@ -97,9 +96,7 @@ class _UpgradePlanPageState extends State<UpgradePlanPage> {
                         Text(
                           "Seamless Anime\nExperience, Ad-Free.",
                           textAlign: TextAlign.center,
-                          style: TextStyles.bodyText1.copyWith(
-                            fontSize: 24.sp,
-                            fontWeight: FontWeight.w800,
+                          style: TextStyles.ralewayHeadingBold24.copyWith(
                             color: ColorsManager.textBlack,
                           ),
                         ),
@@ -109,9 +106,7 @@ class _UpgradePlanPageState extends State<UpgradePlanPage> {
                         Text(
                           "Enjoy unlimited anime streaming without interruptions.",
                           textAlign: TextAlign.center,
-                          style: TextStyles.bodyTextSemiBold14White.copyWith(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w500,
+                          style: TextStyles.ralewayBodyMedium14.copyWith(
                             color: Color(0xFFAEADB5),
                           ),
                         ),
@@ -147,7 +142,10 @@ class _UpgradePlanPageState extends State<UpgradePlanPage> {
                                   onPressed: () {},
                                   child: Text(
                                     "Continue",
-                                    style: TextStyles.bodyText1,
+                                    style: TextStyles.ralewayTitleSemiBold16
+                                        .copyWith(
+                                          color: ColorsManager.backgroundWhite,
+                                        ),
                                   ),
                                 ),
                               ),

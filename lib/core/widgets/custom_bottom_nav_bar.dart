@@ -64,7 +64,10 @@ class CustomBottomNavBar extends StatelessWidget {
                     SizedBox(width: 6.w),
                     Text(
                       item["label"]!,
-                      style: TextStyles.bodyTextSemiBold14White,
+                      style: TextStyles.ralewayBodySemiBold14. copyWith(
+                        color: ColorsManager.backgroundWhite
+                      ),
+                      
                     ),
                   ],
                 ],

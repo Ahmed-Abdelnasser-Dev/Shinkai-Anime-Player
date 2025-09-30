@@ -15,7 +15,6 @@ class CardPlanWidget extends StatefulWidget {
   @override
   State<CardPlanWidget> createState() => _CardPlanWidgetState();
 
-  
 }
 
 class _CardPlanWidgetState extends State<CardPlanWidget> {
@@ -55,7 +54,7 @@ class _CardPlanWidgetState extends State<CardPlanWidget> {
                     //* Plan Text
                     Text(
                       widget.planType,
-                      style: TextStyles.planTextRalewayBoldOffWhite.copyWith(
+                      style: TextStyles.ralewayTitleSemiBold16.copyWith(
                         fontSize: 16.sp,
                         color: widget.isSelected
                             ? ColorsManager.backgroundWhite
@@ -67,9 +66,9 @@ class _CardPlanWidgetState extends State<CardPlanWidget> {
                       children: [
                         Text(
                           "\$${widget.planPrice} USD ",
-                          style: TextStyles.planTextRalewayBoldOffWhite
+                          style: TextStyles.ralewayBodyBold14
                               .copyWith(
-                                fontSize: 14.sp,
+
                                 color: widget.isSelected
                                     ? ColorsManager.backgroundWhite
                                     : ColorsManager.textBlack,
@@ -79,8 +78,7 @@ class _CardPlanWidgetState extends State<CardPlanWidget> {
                         Text(
                            widget.planType != "Annually" ? 
                           "/${widget.planType}" : "/Year",
-                          style: TextStyles.planTextRalewayBoldOffWhite
-                              .copyWith(fontSize: 14.sp),
+                          style: TextStyles.ralewayBodyBold14
                         ),
                       ],
                     ),
@@ -88,7 +86,7 @@ class _CardPlanWidgetState extends State<CardPlanWidget> {
                     SizedBox(height: 8.h),
                     Text(
                       "Include Family Sharing",
-                      style: TextStyles.planTextRalewayBoldOffWhite,
+                      style: TextStyles.ralewayCaptionSemiBold12,
                     ),
                   ],
                 ),
